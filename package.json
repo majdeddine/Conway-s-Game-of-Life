@@ -18,5 +18,8 @@
   "homepage": "https://github.com/majdeddine/Conway-s-Game-of-Life#readme",
   "dependencies": {
     "http-server": "^0.10.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0"
   }
 }
