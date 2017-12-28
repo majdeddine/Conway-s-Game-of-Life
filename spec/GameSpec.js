@@ -17,4 +17,6 @@ describe("Game",function(){
     var game = new Game([[0,1,0],[0,1,0],[0,1,0]])
     expect(game.countAliveNeighbours(0,0)).toEqual(2);
   })
+
+
 })
