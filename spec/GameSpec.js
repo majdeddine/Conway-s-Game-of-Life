@@ -1,5 +1,4 @@
 describe("Game",function(){
-  var Game = require('../lib/Game');
   var game;
   beforeEach(function(){
      game = new Game();
