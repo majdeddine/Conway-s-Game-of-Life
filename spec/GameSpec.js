@@ -8,15 +8,29 @@ describe("Game",function(){
   it("should return the default grid", function(){
     expect(game.grid()).toEqual([[0,0,0],[0,1,0],[0,0,0]]);
   })
+  describe("AliveNeighbours",function(){
 
-  it("should count the how many neighbours are alive",function(){
-    expect(game.countAliveNeighbours(0,0)).toEqual(1);
+    it("should return one ",function(){
+      expect(game.countAliveNeighbours(0,0)).toEqual(1);
+    })
+
+    it("should return two",function(){
+      game.play([[0,1,0],[0,1,0],[0,1,0]]);
+      expect(game.countAliveNeighbours(0,0)).toEqual(2);
+    })
+
+    it("should return three",function(){
+      game.play([[0,1,0],[0,1,0],[0,1,0]]);
+      expect(game.countAliveNeighbours(0,1)).toEqual(3);
+    })
   })
 
-  it("should count the how many neighbours are alive when the grid is blinker",function(){
-    var game = new Game([[0,1,0],[0,1,0],[0,1,0]])
-    expect(game.countAliveNeighbours(0,0)).toEqual(2);
-  })
-
+   // it("live cell with fewer than two live neighbours dies", function(){
+   //   expect(game.play([[1,1,0],[0,0,0],[0,0,0]])).toEqual([[0,0,0],[0,0,0],[0,0,0]])
+   // })
+   //
+   // it(" live cell with two or three live neighbours lives on to the next generation", function(){
+   //   expect(game.play([[1,1,1],[0,0,0],[0,0,0]])).toEqual([[0,1,0],[0,1,0],[0,0,0]])
+   // })
 
 })
